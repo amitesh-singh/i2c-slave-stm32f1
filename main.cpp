@@ -1,6 +1,6 @@
 /*
  * math calculator i2c slave stm32
- * Copyright (C) 2017  Amitesh Singh <singh.amitesh@gmail.com>
+ * Copyright (C) 2018  Amitesh Singh <singh.amitesh@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
