@@ -87,6 +87,7 @@ extern "C" void i2c1_ev_isr(void)
 
    sr1 = I2C_SR1(I2C1);
 
+   // Address matched (Slave)
    if (sr1 & I2C_SR1_ADDR)
      {
         reading = 0;
@@ -97,6 +98,7 @@ extern "C" void i2c1_ev_isr(void)
         sr2 = I2C_SR2(I2C1);
         (void) sr2;
      }
+   // Receive buffer not empty
    else if (sr1 & I2C_SR1_RxNE)
      {
         //ignore more than 3 bytes reading
@@ -106,6 +108,7 @@ extern "C" void i2c1_ev_isr(void)
         *read_p++ = i2c_get_data(I2C1);
         reading++;
      }
+   // Transmit buffer empty & Data byte transfer not finished
    else if ((sr1 & I2C_SR1_TxE) && !(sr1 & I2C_SR1_BTF))
      {
         //send data to master in MSB order
