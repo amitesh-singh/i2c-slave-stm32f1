@@ -41,6 +41,7 @@ srcfiles = ['main.cpp']
 
 libocm3IncPath = libocm3Path + '/include'
 libocm3LibPath = libocm3Path + '/lib'
+libocm3LdPath = libocm3Path + '/lib/stm32/f1'
 
 # check for libopencm3 library
 libocm3lib_obj = compiler_obj.find_library(libocm3cputype, required: true, dirs: libocm3LibPath)
@@ -82,6 +83,7 @@ stm32f1linkargs = ['-Os',
                    '-nostartfiles',
                    '-Wl,--gc-sections',
                    '-L' + libocm3LibPath,
+                   '-L' + libocm3LdPath,
 #               '-l' + libocm3cputype,
                   ]
 
