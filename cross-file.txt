@@ -14,6 +14,6 @@ endian = 'little'
 
 [target_machine]
 system = 'bare-metel'
-cpu_family = 'stm32'
-cpu = 'STM32F1'
+cpu_family = 'arm'
+cpu = 'cortex-m3'
 endian = 'little'

@@ -106,11 +106,12 @@ run_target('upload', command: [stflash, 'write', exe.full_path() + '.hex', '0x08
 
 if meson.is_cross_build()
    message('cross compiling for ' + cputype)
-   message('     \n                  ninja - generates elf file.
+   message('''
+                  ninja - generates elf file.
                   ninja hex - generates hex file.
                   ninja upload - upload hex file to stm32 via stlink programmer.
                   ninja probe - probe stlink programmer.
                   ninja size - gives the summary of hex file size.
-                  (C) Amitesh Singh ')
+                  (C) Amitesh Singh''')
 endif
 
