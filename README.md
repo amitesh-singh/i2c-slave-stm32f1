@@ -2,31 +2,31 @@
 This is an i2c slave based on stm32. This implements a simple math calculator
 for doing addition, subtraction and multiplication of given two numbers.
 
-## how to compile
+## How to compile
 
 Modify `meson.build` according to your needs.
 
 `libocm3Path` - libopencm3 directory path
 
-You need to issue `./build.sh` for once.
+You need to issue `./build.sh` once.
  ```shell
 $ ./build.sh
 $ cd builddir
 ```
-ninja - generates elf file.
+`ninja` - generates elf file.
 ```shell
 $ ninja
 ```
 
-ninja hex - generates hex file.
+`ninja hex` - generates hex file.
 ```shell
 $ ninja hex
 ```
-ninja size - gives the summary of hex file size.
+`ninja size` - gives the summary of hex file size.
 ```shell
 $ ninja size
 ```
-ninja upload - upload hex file to stm32 via stlink programmer.
+`ninja upload` - upload hex file to stm32 via stlink programmer.
 ```shell
 $ ninja upload
 ```
