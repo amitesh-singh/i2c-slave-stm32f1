@@ -28,7 +28,7 @@ stinfo = find_program('st-info')
 stflash = find_program('st-flash')
 
 #define libopencm3 path here
-libocm3Path = '/home/ami/repos/libopencm3'
+libocm3Path = '/home/ami/work/repos/libopencm3'
 
 #define cpu types here
 cputype = 'cortex-m3'
